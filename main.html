@@ -5,30 +5,33 @@
         <meta name="viewport" content="width=device-width">
         <meta name="description" content="Spenser Sagel's portfolio for web developement">
         <link rel="stylesheet" href="main.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     </head>
     <body>
         <header>
             <img src="placeholder.png" alt="logo"/>
-            <div class="hamburger">
+            <div class="hamburger" onclick="pulldown()">
                 <div></div>
                 <div></div>
                 <div></div>
             </div>
-                <span>
-                    <p>projects</p>
-                    <p>about</p>
-                    <p>contact</p>
+                <span class="jumpers">
+                    <a href="#project">projects</a>
+                    <a href="#aboutMe">about</a>
+                    <a href="#contactMe">contact</a>
                 </span>
         </header>
         <div class="section" id="project">
             <h2>Projects</h2>
             <div>
-                <img class="screenshot" src="placeholder.png" alt="project screenshot"/>
+                <img class="screenshot" src="
+                https://previews.dropbox.com/p/thumb/AAgb3yGHc3HJFPUDsZHEnUsWJkEyE1g67i7JKQkuWEKbNt9VwMNZfnd6w018J42HXPIgwJhG8xbfJ6PZLhGGHnx6FPuM_tC-0nQrvBT0XH1kOwvwMlzXvvweIo6GFn4TXiEs9_F1POWQNTwYohLFRLy4g_djoBX579EYEjwvwRT91MV7i3fgLohdeZ90bZ4iwcKWNQs3hk0xchVSmorN28THkBnpU6-oJ9xdTt2roD_L165iifmqqpYaes9XJ18pIX8VKuIg06cJQC_fg6fdzpe7kXkkfSgNbp1pieqcG8e-SIeibyqhBuYGEe8f64AC-D0MClSL7bDNVIW7ErKW5zSB/p.png?fv_content=true&size_mode=5" alt="project screenshot"/>
             </div>
             <div class="projectDescription">
                 <h3>Project 1</h3>
                 <p>This is the description of my project</p>
-                <a href="">Link to project</a>
+                <a href="https://github.com/SpenserSagel/Quiz-App">Link to project</a>
+                <a href="https://spensersagel.github.io/Quiz-App/">Link to live page</a>
             </div>
         </div>
         <div class="section" id="aboutMe">
@@ -40,8 +43,8 @@
                     <img class="headshot" src="placeholder.png" alt="headshot"/>
                 </div>
             <div class=contactField>    
-                <h2>contact field</h2>
-                <form>
+                <h3>contact field</h3>
+                <form action="mailto:spenser.sagel@gmail.com" method="post" enctype="text/plain">
                     <input type="text" name="email" placeholder="email" required>
                     <input type="text" name="subject" placeholder="subject">
                     <textarea name="body" placeholder="write me a message"></textarea>
@@ -54,5 +57,20 @@
             <p class="email">spenser.sagel@gmail.com</p>
             <p>(303)854-4727</p>
         </footer>
+        <script>
+            let target = $(".jumpers");
+            if(window.screen.width<750){
+                target.addClass("hidden");
+            }
+            if(window.screen.width>350){
+                target.removeClass("hidden");
+            }
+            function pulldown(){
+                if(target.hasClass("hidden")){
+                    target.removeClass("hidden");
+                }
+                else target.addClass("hidden");
+            }
+        </script>
     </body>
 </html>
