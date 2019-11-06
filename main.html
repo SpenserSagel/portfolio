@@ -9,7 +9,7 @@
     </head>
     <body>
         <header>
-            <img src="placeholder.png" alt="logo"/>
+            <img src="logo.png" alt="logo"/>
             <div class="hamburger" onclick="pulldown()">
                 <div></div>
                 <div></div>
@@ -28,22 +28,30 @@
                 https://previews.dropbox.com/p/thumb/AAgb3yGHc3HJFPUDsZHEnUsWJkEyE1g67i7JKQkuWEKbNt9VwMNZfnd6w018J42HXPIgwJhG8xbfJ6PZLhGGHnx6FPuM_tC-0nQrvBT0XH1kOwvwMlzXvvweIo6GFn4TXiEs9_F1POWQNTwYohLFRLy4g_djoBX579EYEjwvwRT91MV7i3fgLohdeZ90bZ4iwcKWNQs3hk0xchVSmorN28THkBnpU6-oJ9xdTt2roD_L165iifmqqpYaes9XJ18pIX8VKuIg06cJQC_fg6fdzpe7kXkkfSgNbp1pieqcG8e-SIeibyqhBuYGEe8f64AC-D0MClSL7bDNVIW7ErKW5zSB/p.png?fv_content=true&size_mode=5" alt="project screenshot"/>
             </div>
             <div class="projectDescription">
-                <h3>Project 1</h3>
-                <p>This is the description of my project</p>
+                <h3>Quiz app</h3>
+                <p>This simple quiz application was designed using javascript, html, and css.  
+                    It is a quiz about the youtube show good mythical morning and 
+                    features a simple design that is both responsive and easy to navigate.</p>
                 <a href="https://github.com/SpenserSagel/Quiz-App">Link to project</a>
                 <a href="https://spensersagel.github.io/Quiz-App/">Link to live page</a>
             </div>
         </div>
         <div class="section" id="aboutMe">
             <h2>About me</h2>
-            <p>this is a brief description of myself</p>
+            <p>I'm Spenser Sagel and I am an aspiring web developer.  
+                I have always been passionate about technology and am a recent graduate of the full stack flex program at Thinkful.
+                  I am well versed in css, javascript, html, and c++.  
+                  When I am not working on web design you can find me curled up on the couch with a good book.  
+                  I also enjoy spending time in the lovely rocky mountains.  
+                  My positive attitude and excellent problem solving skills would make me a good addition to any team.</p>
         </div>
         <div class="section" id="contactMe">
-                <div>
+            <h2>Contact me</h2>
+                <!--TODO::add in headshot
+                    <div>
                     <img class="headshot" src="placeholder.png" alt="headshot"/>
-                </div>
+                </div>-->
             <div class=contactField>    
-                <h3>contact field</h3>
                 <form action="mailto:spenser.sagel@gmail.com" method="post" enctype="text/plain">
                     <input type="text" name="email" placeholder="email" required>
                     <input type="text" name="subject" placeholder="subject">
@@ -53,13 +61,14 @@
             </div>
         </div>
         <footer>
-            <p>copyright Spenser Sagel</p>
+            <p><a href="https://github.com/SpenserSagel">https://github.com/SpenserSagel</a></p>
+            <p><a href="www.linkedin.com/in/spenser-sagel">www.linkedin.com/in/spenser-sagel</a></p>
             <p class="email">spenser.sagel@gmail.com</p>
             <p>(303)854-4727</p>
         </footer>
         <script>
             let target = $(".jumpers");
-            if(window.screen.width<750){
+            if(window.screen.width<350){
                 target.addClass("hidden");
             }
             if(window.screen.width>350){
