@@ -109,7 +109,15 @@ img[alt="logo"]{
     width:400px;
     padding-top:10px;
     padding-bottom:10px;
-    margin-right:20px;
+}
+
+#projects{
+    display:flex;
+    flex-direction: column;
+}
+
+#projects:not(:last-child){
+    border-bottom: 2px solid black;
 }
 
 .headshot{
@@ -172,14 +180,18 @@ footer p{
     #contactMe form{
         width:50%;
     }
-    #project div{
-        width:45%;
-        display:inline-block;
+
+    #projects{
+        flex-direction:row;
     }
-    
-    .projectDescription {
-        position:absolute;
-        top:100px;
+
+    #projects div{
+        width:45%;
+    }
+
+    .projectDescription{
+        position: relative;
+        right:100px;
     }
     
     .projectDescription *{
